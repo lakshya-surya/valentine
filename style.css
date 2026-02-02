@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+  position: relative;   /* 👈 ye sabse important */
   background: white;
   padding: 30px;
   border-radius: 20px;
@@ -17,6 +18,12 @@ body {
   box-shadow: 0 0 30px rgba(255, 0, 80, 0.5);
   animation: pop 1s ease;
 }
+.love-gif {
+  width: 250px;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
 
 @keyframes pop {
   0% { transform: scale(0.5); }
@@ -24,7 +31,7 @@ body {
 }
 
 h1 {
-  color: #ff2e63;
+  color: #000000;
 }
 
 .buttons {
@@ -64,4 +71,23 @@ video {
   width: 250px;
   margin-top: 15px;
   border-radius: 15px;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  video {
+    width: 100%;
+  }
 }
