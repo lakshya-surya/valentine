@@ -1,9 +1,16 @@
 // Get name from URL
 const params = new URLSearchParams(window.location.search);
 const name = params.get("name") || "My Love";
+function capitalizeFirstLetter(text) {
+  if (!text) return "";
+  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+}
 
-document.getElementById("name").innerText = name;
-document.getElementById("loveName").innerText = name;
+const formattedName = capitalizeFirstLetter(name);
+
+document.getElementById("name").innerText = formattedName;
+document.getElementById("loveName").innerText = formattedName;
+
 
 const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
